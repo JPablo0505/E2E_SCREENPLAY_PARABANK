@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Open a new bank account in Parabank" skipped="0" tests="1" time="4.15" timestamp="2026-05-27 05:05:29"><testcase name="Successful creation of a new savings account from the initial checking account (Happy Path)"/></testsuite>

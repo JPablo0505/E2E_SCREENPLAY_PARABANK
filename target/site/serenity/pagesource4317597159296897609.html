@@ -1,0 +1,174 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta charset="UTF-8"&gt;<br/>
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;<br/>
+  &lt;title&gt;ParaBank | Open Account&lt;/title&gt;<br/>
+  &lt;link href="template.css" rel="stylesheet" type="text/css"&gt;<br/>
+  &lt;link href="style.css" rel="stylesheet" type="text/css"&gt;<br/>
+  &lt;script src="webjars/jquery/4.0.0/jquery.min.js"&gt;&lt;/script&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body&gt;<br/>
+  &lt;div id="mainPanel"&gt;<br/>
+   &lt;div id="topPanel"&gt;&lt;a href="admin.htm"&gt;&lt;img src="images/clear.gif" width="56" height="42" border="0" class="admin"&gt;&lt;/a&gt; &lt;a href="index.htm"&gt;&lt;img src="images/logo.gif" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank"&gt;&lt;/a&gt;<br/>
+    &lt;p class="caption"&gt;Experience the difference&lt;/p&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="headerPanel" style="background: url(images/header-customer.jpg) 0 0 no-repeat;"&gt;<br/>
+    &lt;ul class="leftmenu"&gt;<br/>
+     &lt;li class="Solutions"&gt;Solutions&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="about.htm"&gt;About Us&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="services.htm"&gt;Services&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="http://www.parasoft.com/jsp/products.jsp"&gt;Products&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="http://www.parasoft.com/jsp/pr/contacts.jsp"&gt;Locations&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="admin.htm"&gt;Admin Page&lt;/a&gt;&lt;/li&gt;<br/>
+    &lt;/ul&gt;<br/>
+    &lt;ul class="button"&gt;<br/>
+     &lt;li class="home"&gt;&lt;a href="index.htm"&gt;home&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="aboutus"&gt;&lt;a href="about.htm"&gt;about&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="contact"&gt;&lt;a href="contact.htm"&gt;contact&lt;/a&gt;&lt;/li&gt;<br/>
+    &lt;/ul&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="bodyPanel"&gt;<br/>
+    &lt;div id="leftPanel"&gt;<br/>
+     &lt;p class="smallText"&gt;&lt;b&gt;Welcome&lt;/b&gt; Juan Pablo Valencia&lt;/p&gt;<br/>
+     &lt;h2&gt;Account Services&lt;/h2&gt;<br/>
+     &lt;ul&gt;<br/>
+      &lt;li&gt;&lt;a href="openaccount.htm"&gt;Open New Account&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="overview.htm"&gt;Accounts Overview&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="transfer.htm"&gt;Transfer Funds&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="billpay.htm"&gt;Bill Pay&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="findtrans.htm"&gt;Find Transactions&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="updateprofile.htm"&gt;Update Contact Info&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="requestloan.htm"&gt;Request Loan&lt;/a&gt;&lt;/li&gt;<br/>
+      &lt;li&gt;&lt;a href="logout.htm"&gt;Log Out&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;/ul&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="rightPanel"&gt;<br/>
+     &lt;div&gt;<br/>
+      &lt;div id="openAccountForm"&gt;<br/>
+       &lt;h1 class="title"&gt;Open New Account&lt;/h1&gt;<br/>
+       &lt;form&gt;<br/>
+        &lt;p&gt;&lt;b&gt;What type of Account would you like to open?&lt;/b&gt;&lt;/p&gt;&lt;select id="type" class="input"&gt; &lt;option value="0"&gt;CHECKING&lt;/option&gt; &lt;option value="1"&gt;SAVINGS&lt;/option&gt; &lt;/select&gt; &lt;br&gt;&lt;br&gt;<br/>
+        &lt;p&gt;&lt;b&gt;A minimum of 100,00&nbsp;$ must be deposited into this account at time of opening. Please choose an existing account to transfer funds into the new account.&lt;/b&gt;&lt;/p&gt;&lt;select id="fromAccountId" class="input"&gt;&lt;option value="21780"&gt;21780&lt;/option&gt;&lt;/select&gt; &lt;br&gt;&lt;br&gt;<br/>
+        &lt;div&gt;<br/>
+         &lt;input type="button" class="button" value="Open New Account"&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/form&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div id="openAccountResult" style="display:none"&gt;<br/>
+       &lt;h1 class="title"&gt;Account Opened!&lt;/h1&gt;<br/>
+       &lt;p&gt;Congratulations, your account is now open.&lt;/p&gt;<br/>
+       &lt;p&gt;&lt;b&gt;Your new account number:&lt;/b&gt; &lt;a id="newAccountId" href=""&gt;&lt;/a&gt;&lt;/p&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div id="openAccountError" style="display:none"&gt;<br/>
+       &lt;h1 class="title"&gt;Error!&lt;/h1&gt;<br/>
+       &lt;p class="error"&gt;An internal error has occurred and has been logged.&lt;/p&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;script&gt;<br/>
+	$(document).ready(function() {<br/>
+		var accounts = null;<br/>
+		var types = [];<br/>
+		var newAccountId = null;<br/>
+		var newAccountUrl = null;<br/>
+		var showForm = function(visible) {<br/>
+			if (visible) {<br/>
+				$("#openAccountForm").show();<br/>
+			} else {<br/>
+				$("#openAccountForm").hide();<br/>
+			}<br/>
+		}<br/>
+		var showResult = function(visible) {<br/>
+			if (visible) {<br/>
+				$("#openAccountResult").show();<br/>
+			} else {<br/>
+				$("#openAccountResult").hide();<br/>
+			}	<br/>
+		}<br/>
+		var showError = function() {<br/>
+			showForm(false);<br/>
+            showResult(false);<br/>
+            $("#openAccountError").show();<br/>
+            var status = error.status &gt; 0 ? error.status : "timeout";<br/>
+            var data = error.data ? error.data : "Server timeout"<br/>
+            console.error("Server returned " + status + ": " + data);<br/>
+		}<br/>
+		var getAccounts = function() {<br/>
+			$.ajax({<br/>
+				url: "services_proxy/bank/customers/18761/accounts",<br/>
+				dataType: "json",<br/>
+				success: function(data) {<br/>
+					accounts = data;<br/>
+					accounts.selectedOption = accounts[0];<br/>
+					$("#fromAccountId").empty();<br/>
+					$.each(accounts, function(i, item) {<br/>
+						$("#fromAccountId").append($("&lt;option&gt;&lt;/option&gt;").attr("value", item.id).text(item.id));<br/>
+					});<br/>
+				},<br/>
+				error: function(data) {<br/>
+					showError(true);<br/>
+				}<br/>
+			});<br/>
+		}<br/>
+		getAccounts();<br/>
+		$('#fromAccountId').change(function() {<br/>
+	        var accountId = $(this).val();<br/>
+	        accounts.forEach((account) =&gt; {<br/>
+	        	if (account.id == accountId) {<br/>
+	        		accounts.selectedOption = account;<br/>
+	        	}<br/>
+	        })<br/>
+	        <br/>
+	    });<br/>
+		$('#type').change(function() {<br/>
+			var type = $(this).val();<br/>
+			types.selectedOption = type;<br/>
+		});<br/>
+		types.selectedOption = $('#type').val();<br/>
+		var submit = function(error) {<br/>
+			var url = "services_proxy/bank/createAccount?customerId=18761&newAccountType="+ types.selectedOption + "&fromAccountId=" + accounts.selectedOption.id;<br/>
+			$.ajax({<br/>
+				type: 'POST',<br/>
+          	  	contentType: 'application/json',<br/>
+				url: url,<br/>
+				success: function(data) {<br/>
+					newAccountId = data.id;<br/>
+					newAccountUrl = "activity.htm" + "?id=" + newAccountId;<br/>
+					$('#newAccountId').attr("href", newAccountUrl).text(newAccountId);<br/>
+					showForm(false);<br/>
+					showResult(true);<br/>
+					<br/>
+				},<br/>
+				error: function(data) {<br/>
+					showError(true);<br/>
+				}<br/>
+			});<br/>
+		}<br/>
+		$("input[type=button]").click(() =&gt; {<br/>
+        	submit(); <br/>
+		});<br/>
+	})<br/>
+&lt;/script&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;div id="footermainPanel"&gt;<br/>
+   &lt;div id="footerPanel"&gt;<br/>
+    &lt;ul&gt;<br/>
+     &lt;li&gt;&lt;a href="index.htm"&gt;Home&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="about.htm"&gt;About Us&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="services.htm"&gt;Services&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="http://www.parasoft.com/jsp/products.jsp"&gt;Products&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="http://www.parasoft.com/jsp/pr/contacts.jsp"&gt;Locations&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="http://forums.parasoft.com/"&gt;Forum&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="sitemap.htm"&gt;Site Map&lt;/a&gt;|&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="contact.htm"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;<br/>
+    &lt;/ul&gt;<br/>
+    &lt;p class="copyright"&gt;© Parasoft. All rights reserved.&lt;/p&gt;<br/>
+    &lt;ul class="visit"&gt;<br/>
+     &lt;li&gt;Visit us at:&lt;/li&gt;<br/>
+     &lt;li&gt;&lt;a href="http://www.parasoft.com/" target="_blank"&gt;www.parasoft.com&lt;/a&gt;&lt;/li&gt;<br/>
+    &lt;/ul&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

@@ -19,5 +19,8 @@ public class RegistrationPage {
 
     public static final String ERROR_FIRST_NAME = "//span[@id='customer.firstName.errors']";
     public static final String ERROR_LAST_NAME = "//span[@id='customer.lastName.errors']";
-    public static final String ERROR_PASSWORD = "//span[@id='repeatedPassword.errors']";
+    public static final String ERROR_PASSWORD = "//span[@id='customer.password.errors']";
+    
+    public static final String ERROR_CONFIRM_PASSWORD = "//span[@id='repeatedPassword.errors']";
+    public static final String ERROR_USERNAME_DUPLICATED = "//span[@id='customer.username.errors']";
 }
