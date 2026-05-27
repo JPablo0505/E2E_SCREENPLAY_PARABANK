@@ -7,7 +7,12 @@ Feature: Open a new bank account in Parabank
     Given that the actor opens the Parabank home page
     And he registers a new user with valid information
 
-  Scenario: Successful creation of a new savings account from the initial checking account (Happy Path)
+  Scenario: Successful creation of a new savings account (Happy Path)
     And he verifies his initial checking account in the accounts overview
-    When he opens a new savings account using the initial checking as source
+    When he opens a new "SAVINGS" account using the initial checking as source
+    Then he should see the successful account creation message
+
+  Scenario: Successful creation of a new checking account (Happy Path)
+    And he verifies his initial checking account in the accounts overview
+    When he opens a new "CHECKING" account using the initial checking as source
     Then he should see the successful account creation message

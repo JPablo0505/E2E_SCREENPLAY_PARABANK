@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="User registration in Parabank" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-27T22:06:01.448Z" hostname="DESKTOP-7N19BH6" time="15.93">
+<testsuite name="User registration in Parabank" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-27T22:26:57.525Z" hostname="DESKTOP-7N19BH6" time="15.189">
   <properties/>
-  <testcase name="Successful user registration (Happy Path)" classname="User registration in Parabank" time="5.961"/>
-  <testcase name="Try to register with invalid or incomplete data (Exceptional Cases) #1" classname="User registration in Parabank" time="3.351"/>
-  <testcase name="Try to register with invalid or incomplete data (Exceptional Cases) #2" classname="User registration in Parabank" time="3.335"/>
-  <testcase name="Try to register with invalid or incomplete data (Exceptional Cases) #3" classname="User registration in Parabank" time="3.282"/>
+  <testcase name="Successful user registration (Happy Path)" classname="User registration in Parabank" time="5.356"/>
+  <testcase name="Try to register with invalid or incomplete data (Exceptional Cases) #1" classname="User registration in Parabank" time="3.299"/>
+  <testcase name="Try to register with invalid or incomplete data (Exceptional Cases) #2" classname="User registration in Parabank" time="3.28"/>
+  <testcase name="Try to register with invalid or incomplete data (Exceptional Cases) #3" classname="User registration in Parabank" time="3.253"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -16,9 +16,9 @@ Successful user registration (Happy Path)(user-registration-in-parabank;successf
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-may 27, 2026 5:06:03 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+may 27, 2026 5:26:58 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 148
-may 27, 2026 5:06:03 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+may 27, 2026 5:26:58 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 148.0.7778.179. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

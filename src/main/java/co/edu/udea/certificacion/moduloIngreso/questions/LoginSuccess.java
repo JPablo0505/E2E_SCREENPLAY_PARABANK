@@ -16,7 +16,6 @@ public class LoginSuccess implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        // Esperamos un máximo de 7 segundos a que la tabla de cuentas aparezca en la UX
         actor.attemptsTo(
             WaitUntil.the(By.xpath(AccountSummaryPage.TABLE_ACCOUNTS), WebElementStateMatchers.isVisible())
                 .forNoMoreThan(7).seconds()

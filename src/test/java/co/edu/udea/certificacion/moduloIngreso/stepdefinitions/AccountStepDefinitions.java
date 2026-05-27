@@ -26,9 +26,9 @@ public class AccountStepDefinitions {
         actor.attemptsTo(OpenThe.accountsOverview());
     }
 
-    @When("he opens a new savings account using the initial checking as source")
-    public void heOpensANewSavingsAccountUsingTheInitialCheckingAsSource() {
-        actor.attemptsTo(OpenThe.newSavingsAccount());
+    @When("he opens a new {string} account using the initial checking as source")
+    public void heOpensANewAccountUsingTheInitialCheckingAsSource(String accountType) {
+        actor.attemptsTo(OpenThe.newAccountOfType(accountType));
     }
 
     @Then("he should see the successful account creation message")

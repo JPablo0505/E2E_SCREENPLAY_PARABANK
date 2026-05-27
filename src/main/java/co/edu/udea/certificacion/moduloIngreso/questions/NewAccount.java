@@ -16,7 +16,6 @@ public class NewAccount implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        // Le damos un margen de espera explícita para que el ID cargue en el DOM tras el clic
         actor.attemptsTo(
             WaitUntil.the(By.xpath(AccountSummaryPage.LINK_NEW_ACCOUNT_NUMBER), WebElementStateMatchers.isVisible())
                 .forNoMoreThan(7).seconds()

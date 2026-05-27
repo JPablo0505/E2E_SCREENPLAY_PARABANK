@@ -1,7 +1,7 @@
 package co.edu.udea.certificacion.moduloIngreso.tasks;
 
 import co.edu.udea.certificacion.moduloIngreso.userinterfaces.RegistrationPage;
-import co.edu.udea.certificacion.moduloIngreso.userinterfaces.LoginPage; // Importamos la interfaz del login
+import co.edu.udea.certificacion.moduloIngreso.userinterfaces.LoginPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -15,12 +15,11 @@ public class SignUp implements Task {
     private final String lastName;
     private final String password;
     private final String confirmPassword;
-    private String usernameForLogin = ""; // Variable auxiliar para saber si es login
+    private String usernameForLogin = "";
     private boolean isLoginAction = false;
     
     private final String uniqueUser = "user_" + System.currentTimeMillis();
 
-    // Constructor estándar para el registro
     public SignUp(String firstName, String lastName, String password, String confirmPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -28,7 +27,6 @@ public class SignUp implements Task {
         this.confirmPassword = confirmPassword;
     }
 
-    // Constructor especial para reutilizar la clase en el Login
     public SignUp(String username, String password, boolean isLoginAction) {
         this.firstName = "";
         this.lastName = "";
@@ -46,14 +44,12 @@ public class SignUp implements Task {
         return Tasks.instrumented(SignUp.class, firstName, lastName, password, confirmPassword);
     }
 
-    // 🌟 NUEVO MÉTODO: Para reutilizar la clase SignUp en tus pruebas de Login independientes
     public static SignUp toLoginWith(String username, String password) {
         return Tasks.instrumented(SignUp.class, username, password, true);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        // Si la acción requerida es Login, ejecuta solo el bloque lateral izquierdo
         if (isLoginAction) {
             actor.attemptsTo(
                 Enter.theValue(this.usernameForLogin).into(By.xpath(LoginPage.INPUT_USERNAME)),
@@ -61,7 +57,6 @@ public class SignUp implements Task {
                 Click.on(By.xpath(LoginPage.BUTTON_LOGIN))
             );
         } else {
-            // De lo contrario, ejecuta tu flujo de Registro tradicional impecable
             actor.attemptsTo(
                 Click.on(By.xpath(RegistrationPage.LINK_REGISTER)),
                 Enter.theValue(this.firstName).into(By.xpath(RegistrationPage.INPUT_FIRST_NAME)),

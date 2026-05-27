@@ -23,7 +23,6 @@ public class LoginStepDefinitions {
     @When("he logs in with username {string} and password {string}")
     public void heLogsInWithUsernameAndPassword(String username, String password) {
         actor.can(BrowseTheWeb.with(herBrowser));
-        // Reutilizamos SignUp llamando a su nuevo método de Login
         actor.attemptsTo(SignUp.toLoginWith(username, password));
     }
 
