@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Open a new bank account in Parabank" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-06-01T03:53:16" hostname="DESKTOP-KNABOT4" time="32.172">
+<testsuite name="Open a new bank account in Parabank" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-06-01T04:03:58" hostname="DESKTOP-KNABOT4" time="31.832">
   <properties/>
-  <testcase name="Successful creation of a new savings account (Happy Path)" classname="Open a new bank account in Parabank" time="18.594"/>
-  <testcase name="Successful creation of a new checking account (Happy Path)" classname="Open a new bank account in Parabank" time="13.578"/>
+  <testcase name="Successful creation of a new savings account (Happy Path)" classname="Open a new bank account in Parabank" time="18.929"/>
+  <testcase name="Successful creation of a new checking account (Happy Path)" classname="Open a new bank account in Parabank" time="12.902"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
@@ -14,9 +14,9 @@ Successful creation of a new savings account (Happy Path)(open-a-new-bank-accoun
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-may 31, 2026 10:53:19 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+may 31, 2026 11:04:02 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find CDP implementation matching 148
-may 31, 2026 10:53:19 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+may 31, 2026 11:04:02 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 ADVERTENCIA: Unable to find version of CDP to use for 148.0.7778.179. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

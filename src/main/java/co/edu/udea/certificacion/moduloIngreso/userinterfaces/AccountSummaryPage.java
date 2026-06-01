@@ -12,4 +12,6 @@ public class AccountSummaryPage {
     public static final String BUTTON_OPEN_ACCOUNT = "//input[@value='Open New Account']";
 
     public static final String LINK_NEW_ACCOUNT_NUMBER = "//a[@id='newAccountId']";
+    public static final String FIRST_ACCOUNT_BALANCE = "//table[@id='accountTable']/tbody/tr[1]/td[2]";
+    public static final String SECOND_ACCOUNT_BALANCE = "//table[@id='accountTable']/tbody/tr[2]/td[2]";
 }

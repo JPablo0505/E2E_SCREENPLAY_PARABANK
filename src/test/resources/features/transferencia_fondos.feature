@@ -12,15 +12,18 @@ Feature: Transfer funds between accounts in Parabank
     When he opens a new "SAVINGS" account using the initial checking as source
     And he transfers an amount of 50 from the first account to the new account
     Then he should see the transfer confirmation message
+    And he should see the updated balance in the accounts overview
 
   Scenario: Successful transfer of a moderate amount (Edge Case)
     And he verifies his initial checking account in the accounts overview
     When he opens a new "SAVINGS" account using the initial checking as source
     And he transfers an amount of 1000 from the first account to the new account
     Then he should see the transfer confirmation message
+    And he should see the updated balance in the accounts overview
 
   Scenario: Transfer funds to the same account (Edge Case)
     And he verifies his initial checking account in the accounts overview
     When he opens a new "SAVINGS" account using the initial checking as source
     And he transfers an amount of 50 to the same account
     Then he should see the transfer confirmation message
+    And he should see the updated balance in the accounts overview

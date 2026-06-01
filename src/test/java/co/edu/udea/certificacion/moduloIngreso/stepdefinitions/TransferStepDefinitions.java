@@ -1,7 +1,9 @@
 package co.edu.udea.certificacion.moduloIngreso.stepdefinitions;
 
 import co.edu.udea.certificacion.moduloIngreso.tasks.Transfer;
+import co.edu.udea.certificacion.moduloIngreso.tasks.OpenThe;
 import co.edu.udea.certificacion.moduloIngreso.questions.TransferSuccess;
+import co.edu.udea.certificacion.moduloIngreso.questions.BalanceUpdated;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.When;
@@ -13,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 public class TransferStepDefinitions {
 
@@ -38,6 +41,15 @@ public class TransferStepDefinitions {
         actor.should(
             seeThat("El mensaje de confirmacion de transferencia",
                 TransferSuccess.message(), equalTo("Transfer Complete!"))
+        );
+    }
+
+    @Then("he should see the updated balance in the accounts overview")
+    public void verifyBalanceUpdated() {
+        actor.attemptsTo(OpenThe.accountsOverview());
+        actor.should(
+            seeThat("El saldo actualizado es visible tras la transferencia",
+                BalanceUpdated.isVisible(), is(true))
         );
     }
 
