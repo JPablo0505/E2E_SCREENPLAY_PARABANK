@@ -2,6 +2,7 @@ package co.edu.udea.certificacion.moduloIngreso.stepdefinitions;
 
 import co.edu.udea.certificacion.moduloIngreso.tasks.OpenThe;
 import co.edu.udea.certificacion.moduloIngreso.questions.NewAccount;
+import co.edu.udea.certificacion.moduloIngreso.questions.NewAccountVerified;
 
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -12,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 public class AccountStepDefinitions {
 
@@ -36,6 +38,14 @@ public class AccountStepDefinitions {
         actor.should(
             seeThat("El mensaje de éxito de apertura de cuenta", 
                 NewAccount.successMessage(), equalTo("Account Opened!"))
+        );
+    }
+
+    @Then("he should see the new account listed in the accounts overview")
+    public void heShouldSeeNewAccountInOverview() {
+        actor.should(
+            seeThat("La nueva cuenta aparece en el resumen de cuentas",
+                NewAccountVerified.inOverview(), is(true))
         );
     }
 }

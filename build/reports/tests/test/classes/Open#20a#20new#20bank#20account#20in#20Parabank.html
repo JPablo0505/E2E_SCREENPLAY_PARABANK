@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">4</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">31.831s</div>
+<div class="counter">48.070s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,12 +79,22 @@
 </thead>
 <tr>
 <td class="success">Successful creation of a new checking account (Happy Path)</td>
-<td class="success">12.902s</td>
+<td class="success">9.801s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Successful creation of a new savings account (Happy Path)</td>
-<td class="success">18.929s</td>
+<td class="success">13.457s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Verify the new checking account appears in the overview (Exceptional Case)</td>
+<td class="success">12.509s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Verify the new savings account appears in the overview (Exceptional Case)</td>
+<td class="success">12.303s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,9 +112,9 @@ Successful creation of a new savings account (Happy Path)(open-a-new-bank-accoun
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-may 31, 2026 11:04:02 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+may 31, 2026 11:19:08 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find CDP implementation matching 148
-may 31, 2026 11:04:02 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+may 31, 2026 11:19:08 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 ADVERTENCIA: Unable to find version of CDP to use for 148.0.7778.179. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
@@ -130,6 +140,38 @@ Successful creation of a new checking account (Happy Path)(open-a-new-bank-accou
 
 Successful creation of a new checking account (Happy Path)
 ----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Verify the new savings account appears in the overview (Exceptional Case)(open-a-new-bank-account-in-parabank;verify-the-new-savings-account-appears-in-the-overview-(exceptional-case))
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Verify the new savings account appears in the overview (Exceptional Case)
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Verify the new checking account appears in the overview (Exceptional Case)(open-a-new-bank-account-in-parabank;verify-the-new-checking-account-appears-in-the-overview-(exceptional-case))
+--------------------------------------------------------------------------------
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Verify the new checking account appears in the overview (Exceptional Case)
+----------------------------------------------------------------------?[0m
 </pre>
 </span>
 </div>
@@ -141,7 +183,7 @@ Successful creation of a new checking account (Happy Path)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 31/05/2026, 11:06:06 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 31/05/2026, 11:20:55 p. m.</p>
 </div>
 </div>
 </body>

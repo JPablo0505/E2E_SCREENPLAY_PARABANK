@@ -16,3 +16,15 @@ Feature: Open a new bank account in Parabank
     And he verifies his initial checking account in the accounts overview
     When he opens a new "CHECKING" account using the initial checking as source
     Then he should see the successful account creation message
+
+  Scenario: Verify the new savings account appears in the overview (Exceptional Case)
+    And he verifies his initial checking account in the accounts overview
+    When he opens a new "SAVINGS" account using the initial checking as source
+    Then he should see the successful account creation message
+    And he should see the new account listed in the accounts overview
+
+  Scenario: Verify the new checking account appears in the overview (Exceptional Case)
+    And he verifies his initial checking account in the accounts overview
+    When he opens a new "CHECKING" account using the initial checking as source
+    Then he should see the successful account creation message
+    And he should see the new account listed in the accounts overview
