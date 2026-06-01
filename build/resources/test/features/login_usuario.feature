@@ -20,4 +20,4 @@ Feature: User login in Parabank
       | username | password | errorMessage                          |
       |          | demo     | Please enter a username and password. |
       | john     |          | Please enter a username and password. |
-      | errorUser| badPass  | The username and password could not be verified. |
+      | errorUser86868| badPass686857  | The username and password could not be verified. |

@@ -3,6 +3,7 @@ package co.edu.udea.certificacion.moduloIngreso.stepdefinitions;
 import co.edu.udea.certificacion.moduloIngreso.tasks.Transfer;
 import co.edu.udea.certificacion.moduloIngreso.tasks.OpenThe;
 import co.edu.udea.certificacion.moduloIngreso.questions.TransferSuccess;
+import co.edu.udea.certificacion.moduloIngreso.questions.TransferError;
 import co.edu.udea.certificacion.moduloIngreso.questions.BalanceUpdated;
 
 import io.cucumber.java.After;
@@ -24,14 +25,14 @@ public class TransferStepDefinitions {
 
     private Actor actor = Actor.named("Prueba");
 
-    @When("he transfers an amount of {int} from the first account to the new account")
-    public void transferFunds(int amount) {
+    @When("he transfers an amount of {string} from the first account to the new account")
+    public void heTransfersAnAmountFromFirstToNewAccount(String amount) {
         actor.can(BrowseTheWeb.with(herBrowser));
         actor.attemptsTo(Transfer.funds(amount));
     }
 
-    @When("he transfers an amount of {int} to the same account")
-    public void transferFundsToSameAccount(int amount) {
+    @When("he transfers an amount of {string} to the same account")
+    public void transferFundsToSameAccount(String amount) {
         actor.can(BrowseTheWeb.with(herBrowser));
         actor.attemptsTo(Transfer.fundsToSameAccount(amount));
     }
@@ -50,6 +51,23 @@ public class TransferStepDefinitions {
         actor.should(
             seeThat("El saldo actualizado es visible tras la transferencia",
                 BalanceUpdated.isVisible(), is(true))
+        );
+    }
+
+    @Then("he should see a validation error indicating only numeric values")
+    public void verifyNumericError() {
+        actor.should(
+            seeThat("Mensaje de error por caracteres alfabéticos",
+                TransferError.message(), 
+                equalTo("An internal error has occurred and has been logged."))
+        );
+    }
+
+    @Then("the system should reject the transaction with an invalid amount error")
+    public void verifyNegativeMoneyError() {
+        actor.should(
+            seeThat("El sistema rechaza montos negativos",
+                TransferSuccess.message(), equalTo("Invalid Amount")) 
         );
     }
 

@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Transfer funds between accounts in Parabank" skipped="0" tests="3" time="3.29" timestamp="2026-05-31 11:20:14"><testcase name="Successful transfer of funds from checking to savings (Happy Path)"/><testcase name="Successful transfer of a moderate amount (Edge Case)"/><testcase name="Transfer funds to the same account (Edge Case)"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Transfer funds between accounts in Parabank" skipped="0" tests="4" time="6.43" timestamp="2026-06-01 10:16:13"><testcase name="Successful transfer of funds from checking to savings (Happy Path)"/><testcase name="Try to transfer funds using invalid formats like letters (Exceptional Case)"/><testcase name="Try to transfer a negative amount of money (Exceptional Case)"><failure message="&#10;Expected: &quot;Invalid Amount&quot;&#10;     but: was &quot;Transfer Complete!&quot;" type="java.lang.AssertionError">
+Expected: "Invalid Amount"
+     but: was "Transfer Complete!"</failure><system-err>
+Expected: "Invalid Amount"
+     but: was "Transfer Complete!"&#13;
+co.edu.udea.certificacion.moduloIngreso.stepdefinitions.TransferStepDefinitions.verifyNegativeMoneyError(TransferStepDefinitions.java:68)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Transfer funds to the same account (Edge Case - System Vulnerability)"/></testsuite>
