@@ -14,7 +14,7 @@ Feature: User login in Parabank
     When he logs in with username "<username>" and password "<password>"
     Then he should see the login error message as "<errorMessage>"
 
-    #NOTA SQA: Este caso puede presentar intermitencia (flakiness) en la nube pública
+    #NOTA: Este caso puede presentar intermitencia en la nube pública
     
     Examples:
       | username | password | errorMessage                          |

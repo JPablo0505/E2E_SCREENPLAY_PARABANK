@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="User login in Parabank" skipped="0" tests="4" time="4.66" timestamp="2026-06-01 10:21:53"><testcase name="Successful login with an existing user (Happy Path)"/><testcase name="Try to log in with invalid or incomplete credentials (Exceptional Cases)"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [[ChromeDriver: chrome on windows (73b81b8f2db2e0b49ce3e12c2b21baf0)] -&gt; xpath: //p[@class='error']]" type="java.lang.AssertionError">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="User login in Parabank" skipped="0" tests="4" time="2.43" timestamp="2026-06-02 04:13:41"><testcase name="Successful login with an existing user (Happy Path)"/><testcase name="Try to log in with invalid or incomplete credentials (Exceptional Cases)"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [[ChromeDriver: chrome on windows (7dd71b3d380c802050ca8132b62fd7f5)] -&gt; xpath: //p[@class='error']]" type="java.lang.AssertionError">
 Expected: an element that is visible
-     but: no matching element found by [[ChromeDriver: chrome on windows (73b81b8f2db2e0b49ce3e12c2b21baf0)] -&gt; xpath: //p[@class='error']]</failure><system-err>
+     but: no matching element found by [[ChromeDriver: chrome on windows (7dd71b3d380c802050ca8132b62fd7f5)] -&gt; xpath: //p[@class='error']]</failure><system-err>
 Expected: an element that is visible
-     but: no matching element found by [[ChromeDriver: chrome on windows (73b81b8f2db2e0b49ce3e12c2b21baf0)] -&gt; xpath: //p[@class='error']]&#13;
+     but: no matching element found by [[ChromeDriver: chrome on windows (7dd71b3d380c802050ca8132b62fd7f5)] -&gt; xpath: //p[@class='error']]&#13;
 co.edu.udea.certificacion.moduloIngreso.questions.LoginError.answeredBy(LoginError.java:19)&#13;
 co.edu.udea.certificacion.moduloIngreso.questions.LoginError.answeredBy(LoginError.java:11)&#13;
 co.edu.udea.certificacion.moduloIngreso.stepdefinitions.LoginStepDefinitions.heShouldSeeTheLoginErrorMessageAs(LoginStepDefinitions.java:39)&#13;
